@@ -9,7 +9,7 @@ compile: $(EBIN) $(EBIN)/$(PROJECT).app
 
 $(EBIN)/$(PROJECT).app:
 	@erlc -v +debug_info -o $(EBIN) $(SOURCES)
-	@sed "s/{modules,\s*\[\]}/{modules, \[$(MODULES)\]}/" src/$(PROJECT).app.src > $@
+	@sed "s/{modules,[[:space:]]*\[\]}/{modules, \[$(MODULES)\]}/" src/$(PROJECT).app.src > $@
 
 $(EBIN):
 	@mkdir -p $(EBIN)
