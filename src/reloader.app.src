@@ -1,0 +1,6 @@
+{application,reloader,
+ [{applications,[]},
+  {description,"auto load the changed beam in development"},
+  {vsn,"0.1.0"},
+  {modules,[]},
+  {registered,[]}]}.
